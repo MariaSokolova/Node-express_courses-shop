@@ -35,7 +35,7 @@ if ($card) {
 
       fetch('/card/remove/' + id, {
         method: 'delete',
-        headers:{
+        headers: {
           'X-XSRF-TOKEN': csrf
         }
       }).then(res => res.json())
