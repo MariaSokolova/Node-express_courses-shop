@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const csrf = require('csurf');
 const flash = require('connect-flash');
+const helmet = require('helmet');
+const compression = require('compression');
 const mongoos = require('mongoose');
 const exphbs = require('express-handlebars');
 const session = require('express-session');
@@ -48,6 +50,8 @@ app.use(session({
 }));
 app.use(csrf());
 app.use(flash());
+app.use(compression());
+app.use(helmet());
 app.use(varMiddleware);
 app.use(userMiddleware);
 
@@ -59,8 +63,6 @@ app.use('/orders', ordersRouter);
 app.use('/auth', authRouter);
 
 app.use(errorHandler);
-
-
 
 const PORT = process.env.PORT || 4000;
 

@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
     "connect-flash": "^0.1.1",
     "connect-mongodb-session": "^2.4.1",
     "csurf": "^1.11.0",
@@ -19,6 +20,7 @@
     "express-handlebars": "^3.0.2",
     "express-session": "^1.17.1",
     "express-validator": "^6.6.1",
+    "helmet": "^4.2.0",
     "mongoose": "^5.10.11",
     "uuid": "^8.3.1",
     "uuidv4": "^6.2.4"
